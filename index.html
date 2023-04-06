@@ -1,83 +1,222 @@
-<Html>    
-<Head>  
-<title>  
-Example of Header-levels  
-</title>  
-</Head>  
-  <script>
-         // load Branch
-         (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking qrCode".split(" "), 0);
-         // init Branch
-         
-         branch.init('key_live_OUR_KEY_GOES_HERE', function(err, data) {
-console.log(err, data);
-});
-    
-    var linkData = {
-  campaign: 'content 123',
-  channel: 'facebook',
-  feature: 'dashboard',
-  stage: 'new user',
-  tags: [ 'tag1', 'tag2', 'tag3' ],
-  alias: '',
-  data: {
-    'custom_bool': true,
-    'custom_int': Date.now(),
-    'custom_string': 'hello',
-    '$og_title': 'Title',
-    '$og_description': 'Description',
-    '$og_image_url':'http://lorempixel.com/400/400'
-  }
-};
+<html><head><meta name="branch:deeplink:something" content="baddest">
+<meta name="branch:deeplink:something" content="baddest">
 
-branch.link(linkData, function(err, link) {
-  console.log(link);
-});
-      </script>
-  
-<Body>   
-  
-  <button id="button">deep link</button>
-<a id="anchor" href="#">deep link</a>
-  
-  <script>
-    var linkData = {
-  campaign: 'content 123',
-  channel: 'facebook',
-  feature: 'dashboard',
-  stage: 'new user',
-  tags: [ 'tag1', 'tag2', 'tag3' ],
-  alias: '',
-  data: {
-    'custom_bool': true,
-    'custom_int': Date.now(),
-    'custom_string': 'hello',
-    '$og_title': 'Title',
-    '$og_description': 'Description',
-    '$og_image_url':'http://lorempixel.com/400/400'
-  }
-};
+<meta name="branch:deeplink:joonstest" content="one">
+<meta property="branch:deeplink:$deeplink_path" content="propertydeeplinkpath">
+<meta property="branch:deeplink:$desktop_url" content="https://tapas.io/?%2526utm_source%253Dxxxxxx%2526utm_campaign%253Dxxxxxxxx%2526utm_medium%253Dxxxxxx">
 
-branch.link(linkData, function(err, link) {
-  // bind elements
-  document.getElementById('button').onclick = function() {
-    window.open(link || err);
-  };
-  document.getElementById('anchor').href = link || err;
-});
+<meta name="branch:deeplink:$deeplink_path" content="namedeeplinkpath">
+<meta name="twitter:app:url:iphone" content="historyplus://select/tpid/1435976771697">
+<meta name="twitter:app:url:googleplay" content="historyplus://select/tpid/1435976771697">
+
+
+
+
+
+<!-- Google Tag Manager -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMCJ8HH');</script> -->
+    <!-- End Google Tag Manager -->
+
+
+
+  
+
+
+<script>(function() {
+			// injected DOM script is not a content script anymore,
+			// it can modify objects and functions of the page
+			var _pushState = history.pushState;
+			history.pushState = function(state, title, url) {
+				_pushState.call(this, state, title, url);
+				window.dispatchEvent(
+					new CustomEvent('state-changed', { detail: url })
+				);
+			};
+			// repeat the above for replaceState too
+		})();</script><script>(function() {
+			// injected DOM script is not a content script anymore,
+			// it can modify objects and functions of the page
+			var _pushState = history.pushState;
+			history.pushState = function(state, title, url) {
+				_pushState.call(this, state, title, url);
+				window.dispatchEvent(
+					new CustomEvent('state-changed', { detail: url })
+				);
+			};
+			// repeat the above for replaceState too
+		})();</script><script>(function() {
+			// injected DOM script is not a content script anymore,
+			// it can modify objects and functions of the page
+			var _pushState = history.pushState;
+			history.pushState = function(state, title, url) {
+				_pushState.call(this, state, title, url);
+				window.dispatchEvent(
+					new CustomEvent('state-changed', { detail: url })
+				);
+			};
+			// repeat the above for replaceState too
+		})();</script><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Black.woff2') format('woff2');
+}</style></head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMCJ8HH"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+  <h1>Hello Visitor</h1>
+  
+ 
+      
+     <!--
+          <input type="text" id="UserAgent">
+        <a href="https://app.liven.com.au/DlEGOSZJES">https://app.liven.com.au/DlEGOSZJES</a>
+        <br><br>
+        <a href="https://liven.app.link/DlEGOSZJES">https://liven.app.link/DlEGOSZJES</a>
+      -->
+      <p><a href="intent://amazon.in/minitv/tp/97a9fc97-4ad4-4b11-b237-f0fd3ba96cc3?name=danish&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz83Myywp00ssKNDLyczL1i9JLS6JT8zJTCwGABUWLtQiAAAA&amp;link_click_id=1149671110903075099#Intent;scheme=com.amazon.mobile.shopping;package=in.amazon.mShop.android.shopping;S.browser_fallback_url=https%3A%2F%2Fwww.amazon.in%2Fminitv%2Ftp%2F97a9fc97-4ad4-4b11-b237-f0fd3ba96cc3%3Futm_medium%3Dmarketing%26_branch_match_id%3D1149671110903075099%26_branch_referrer%3DH4sIAAAAAAAAA8soKSkottLXz83Myywp00ssKNDLyczL1i9JLS6JT8zJTCwGABUWLtQiAAAA;S.market_referrer=link_click_id%3D1149671110903075099%26utm_source%3DBranch%26utm_medium%3Dmarketing;B.branch_intent=true;end">Chrome intent 1</a></p>
+      
+      
+
+      <script async="" src="https://cdn.branch.io/branch-latest.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+      <script type="text/javascript">
+  
+        // (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
+        // branch.init('key_live_knJAF6W45vSHVJiP0wn8figpqFePX59K');
+        // branch.setBranchViewData({
+        // data: {
+        //     '$deeplink_path': 'picture/12345',
+        //     'picture_id': '12345',
+        //     'user_id': '45123'
+        // }
+        // });
+        // branch.cr(); 
     
-  </script>
-  
-<h6> WebSDK </h6>   
-<h5> WebSDK </h5>  
-<h4> WebSDK </h4>  
-<h3> WebSDK </h3>  
-<h2> WebSDK </h2>  
-<h1> WebSDK </h1>  
-  
-  <h1>QR CODE</h1>
-<script>
-ar qrCodeSettings = {
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData setAPIResponseCallback qrCode".split(" "), 0);
+
+        var branchOptions = { no_journeys: false }
+        branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzEifariV', function(err, data) {
+          // callback to handle err or data
+          console.log("Error "+err);
+          console.log("Data "+data);
+            
+      });
+    
+
+      // var branchOptions = { no_journeys: true }
+      // branch.init('key_live_joGlRdT0O6N8SZBTe5hjQfllzE`ifariV', branchOptions, function(err, data) {});
+    
+      var event_and_custom_data = {
+       "transaction_id": "tras_Id_1232343434",
+       "currency": "USD",
+       "revenue": 180.2,
+       "shipping": 10.5,
+       "tax": 13.5,
+       "coupon": "promo-1234",
+       "affiliation": "high_fi",
+       "description": "Preferred purchase",
+       "purchase_loc": "Palo Alto",
+       "store_pickup": "unavailable"
+    };
+    
+    var content_items = [
+    {
+       "$content_schema": "COMMERCE_PRODUCT",
+       "$og_title": "Nike Shoe",
+       "$og_description": "Start loving your steps",
+       "$og_image_url": "http://example.com/img1.jpg",
+       "$canonical_identifier": "nike/1234",
+       "$publicly_indexable": false,
+       "$price": 101.2,
+       "$locally_indexable": true,
+       "$quantity": 1,
+       "$sku": "1101123445",
+       "$product_name": "Runner",
+       "$product_brand": "Nike",
+       "$product_category": "Sporting Goods",
+       "$product_variant": "XL",
+       "$rating_average": 4.2,
+       "$rating_count": 5,
+       "$rating_max": 2.2,
+       "$creation_timestamp": 1499892854966,
+       "$exp_date": 1499892854966,
+       "$keywords": [ "sneakers", "shoes" ],
+       "$address_street": "230 South LaSalle Street",
+       "$address_city": "Chicago",
+       "$address_region": "IL",
+       "$address_country": "US",
+       "$address_postal_code": "60604",
+       "$latitude": 12.07,
+       "$longitude": -97.5,
+       "$image_captions": [ "my_img_caption1", "my_img_caption_2" ],
+       "$condition": "NEW",
+       "$custom_fields": {"foo1":"bar1","foo2":"bar2"}
+    },
+    {
+       "$og_title": "Nike Woolen Sox",
+       "$canonical_identifier": "nike/5324",
+       "$og_description": "Fine combed woolen sox for those who love your foot",
+       "$publicly_indexable": false,
+       "$price": 80.2,
+       "$locally_indexable": true,
+       "$quantity": 5,
+       "$sku": "110112467",
+       "$product_name": "Woolen Sox",
+       "$product_brand": "Nike",
+       "$product_category": "Apparel & Accessories",
+       "$product_variant": "Xl",
+       "$rating_average": 3.3,
+       "$rating_count": 5,
+       "$rating_max": 2.8,
+       "$creation_timestamp": 1499892854966
+    }];
+    
+    // var customer_event_alias = "my custom alias";
+    
+    
+    branch.logEvent(
+       "COMPLETE_REGISTRATION",
+       event_and_custom_data,
+       content_items,
+       function(err) { 
+         console.log("******");
+        }
+    );
+
+    var qrCodeSettings = {
     "code_color":"#000000",
     "background_color": "#FFFFFF",
     "margin": 5,
@@ -97,39 +236,35 @@ var qrCodeLinkData = {
         '$og_image_url': 'http://branch.io/img/logo_icon_white.png'
     }
 };
-branch.qrCode(qrCodeLinkData, qrCodeSettings, function(err, qrCode) {
-    // qrCode.rawBuffer is the raw buffer
-    // qrCode.base64() is the encoded 
-    //
-    // Example img tag:
-    // <img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">
-});
-  </script>
-  
-  
-  <h1> Joureny </h1>
-  
-  <script>
-    // optional additional deep link data
-var linkData = {
-  campaign: 'content 123',
-  channel: 'facebook',
-  feature: 'dashboard',
-  stage: 'new user',
-  tags: [ 'tag1', 'tag2', 'tag3' ],
-  alias: '',
-  data: {
-    'custom_bool': true,
-    'custom_int': Date.now(),
-    'custom_string': 'hello',
-    '$og_title': 'Title',
-    '$og_description': 'Description',
-    '$og_image_url':'http://lorempixel.com/400/400'
-  }
-};
+var response = $('#qr');
+// branch.qrCode(qrCodeLinkData, qrCodeSettings, function(err, qrCode) {
+//     // qrCode.rawBuffer is the raw buffer
+//     // qrCode.base64() is the encoded 
+//     //
+//     // Example img tag:
+//     // <img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">
+//     response.html("<p>Help1</p>")
+    
+//     console.log("base64 "+qrCode.base64());
 
-branch.setBranchViewData(linkData);
+//     response.html('<img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png" width="500" height="500">');
 
-  </script>
-</Body>  
-</Html>  
+//     // response.html('<img src="data:image/png;charset=utf-8;base64,' + qrCode.base64() + '" width="500" height="500">');
+
+// });
+    
+    
+      // branch.crossPlatformIds();
+      </script>
+
+<form action="" method="POST">
+  <input name="phone" id="phone" type="text" class="light" placeholder="+44 Phone Number" pattern="^\+[1-9]{1}[0-9]{3,14}$" value="" title="Please enter your phone number including the country code (+44 for UK)">
+  <button id="phone_submit" class="light">Download Freetrade</button>
+</form>
+
+    
+
+    
+
+
+<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"></scribe-shadow><div class="pktInstalled"></div><div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div></body></html>
